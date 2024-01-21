@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background: linear-gradient(#1C0029,#2E023F);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+#navBar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+#navBar>h1{
+    padding: 10px;
+    font-size: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#search_bar{
+    position: relative;
+    background: #2E023F;
+    padding: 15px;
+    width: 300px;
+    height: 20px;
+
+    margin-left: 70px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search_bar>input{
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: 0;
+}
+#search_bar>button{
+    background: transparent;
+    border: 0;
+    position: absolute;
+    margin-left: -20%;
+    transition: 1s;
+}
+#search_icon{
+    background: transparent;
+    margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+#search_bar>input::placeholder{
+    text-align: center;
+    color: #7B0855;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#search_bar>input:focus + button{
+    margin-left: 60%;
+
+}
+
+#profileContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 250px;
+    height: 100px;
+    margin-top: -40px;
+}
+
+#profileContainer>button{
+    background: transparent;
+    outline: none;
+    border: 0;
+    border-radius: 50%;
+    padding: 0 20px;
+}
+
+#bell_icon{
+    width: 20px;
+    height: 20px;
+}
+
+#profileContainer>h4{
+    background: #2E023F;
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+    font-weight: 100;
+    border-radius: 10px;
+}
+#profileCircularDiv{
+    border-radius: 50%;
+    background: #EB3B2E;
+    width: 50px;
+    height: 50px;
+}
+
+#page1{
+    display: flex;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: space-around;
+
+}
+#projectContainer{
+    background: #1C0029;
+    height: calc(100vh - 110px);
+    width: 50vw;
+    z-index: 10;
+    box-shadow: 200px black;
+}
+#headingBrowseProjects{
+    padding: 20px 20px 0px 20px;
+}
+#tags{
+    padding: 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#projectsScroll{
+    height: calc(100vh - 250px);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+   overflow: scroll;
+   display: hidden;
+   overflow-x: hidden;
+}
+#projectsScroll::-webkit-scrollbar {
+    display: none;
 }
